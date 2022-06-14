@@ -1,7 +1,5 @@
 "use strict"
 
-
-
 function calcLinear() {
     // Use this formula y1 = ax1 + b.  y2 = ax2 + b.
     let Ymax = document.getElementById("maxWidth").value;
@@ -15,7 +13,13 @@ function calcLinear() {
 
 function showLinear() {
     calcLinear();
-    document.getElementById("answer").innerHTML = `${a.toFixed(3)}vw + ${b.toFixed()}px`;
+    let symbol = '+';
+    if (b < 0) {
+        symbol = " - ";
+        b = Math.abs(b);
+    }
+
+    document.getElementById("answer").innerHTML = `${a.toFixed(3)}vw ${symbol} ${b.toFixed(2)}px`;
 }
 
 
