@@ -19,7 +19,11 @@ function showLinear() {
         b = Math.abs(b);
     }
 
-    document.getElementById("answer").innerHTML = `${a.toFixed(3)}vw ${symbol} ${b.toFixed(2)}px`;
+    if ((Math.abs(a) != Infinity) && (Math.abs(b) != Infinity) && (a != NaN) && (b != NaN)) {
+        document.getElementById("answer").innerHTML = `${a.toFixed(3)}vw ${symbol} ${b.toFixed(2)}px`;
+    } else {
+        document.getElementById("answer").innerHTML = "Error";
+    }
 }
 
 
