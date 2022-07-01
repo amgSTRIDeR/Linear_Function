@@ -6,7 +6,7 @@ function calcLinear() {
     let Ymin = document.getElementById("minWidth").value;
     let Xmax = document.getElementById("maxVW").value / 100;
     let Xmin = document.getElementById("minVW").value / 100;
-    
+
     a = ((Ymax - Ymin) / (Xmax - Xmin));
     b = Ymin - (a * Xmin);
 }
@@ -20,7 +20,7 @@ function showLinear() {
     }
 
     if ((Math.abs(a) != Infinity) && (Math.abs(b) != Infinity) && (a != NaN) && (b != NaN)) {
-        document.getElementById("answer").innerHTML = `${a.toFixed(3)}vw ${symbol} ${b.toFixed(2)}px`;
+        document.getElementById("answer").innerHTML = `calc(${a.toFixed(3)}vw ${symbol} ${b.toFixed(2)}px)`;
     } else {
         document.getElementById("answer").innerHTML = "Error";
     }
