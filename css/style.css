@@ -53,16 +53,16 @@ ul {
 }
 
 .viewportwidth_input:first-child {
-   margin-right: calc(18.6vw - 81px);
+    margin-right: calc(18.6vw - 81px);
 }
 
-.answer {
+.answer_div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.answer > p {
+.answer_div>p {
     border: 2px solid #ffffff;
     padding: 3px;
     border-radius: 10px;
@@ -74,11 +74,11 @@ ul {
     color: #ffffff;
     outline: 1px solid #ffffff;
     border-radius: 5px;
-    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .copy_button:active {
- background-color: #ffffff;
- color: #000000;
- border-color: #000000;   
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #000000;
 }
