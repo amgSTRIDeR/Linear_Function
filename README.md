@@ -2,6 +2,10 @@
 
 A web-based calculator for generating CSS `calc()` functions that convert between pixel values and viewport width units (vw). This tool helps create responsive CSS values using linear interpolation.
 
+🔗 **[Try it live](https://amgstrider.github.io/Linear_Function/)**
+
+![Linear Function Calculator Screenshot](https://github.com/user-attachments/assets/487dd797-7ccb-4ad3-a255-d33823f0ea08)
+
 ## 🎯 Purpose
 
 This calculator solves the common problem of creating fluid, responsive layouts in CSS. It generates `calc()` expressions that smoothly scale between different viewport widths, eliminating the need for multiple media queries.
