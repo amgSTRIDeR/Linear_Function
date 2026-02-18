@@ -17,27 +17,27 @@ This calculator solves the common problem of creating fluid, responsive layouts 
 
 1. **Open the Tool**: Open `index.html` in your web browser
 2. **Input Values**:
-   - **max-width**: Maximum pixel value (e.g., 24 for 24px)
-   - **min-width**: Minimum pixel value (e.g., 16 for 16px)
-   - **min-vw**: Minimum viewport width in vw units (e.g., 32 for 320px viewport width, since 1vw = 1% of viewport)
-   - **max-vw**: Maximum viewport width in vw units (e.g., 120 for 1200px viewport width)
+   - **max-width**: Maximum pixel value you want (e.g., 24 for 24px)
+   - **min-width**: Minimum pixel value you want (e.g., 16 for 16px)
+   - **min-vw**: Viewport width (in vw) where you want the min-width to apply (e.g., 32)
+   - **max-vw**: Viewport width (in vw) where you want the max-width to apply (e.g., 120)
 3. **Get Result**: The calculator automatically generates a `calc()` expression
 4. **Copy**: Click "Copy to Clipboard" to copy the result
 
 ## 📐 Example
 
 **Input:**
-- max-width: `24`
-- min-width: `16`
-- min-vw: `32` (320px viewport width)
-- max-vw: `120` (1200px viewport width)
+- max-width: `24` (pixels)
+- min-width: `16` (pixels)
+- min-vw: `32` (32vw)
+- max-vw: `120` (120vw)
 
 **Output:**
 ```css
 calc(0.909vw + 13.09px)
 ```
 
-This creates a font size (or any other property) that smoothly scales from 16px at 320px viewport width to 24px at 1200px viewport width.
+This creates a font size (or any other property) that smoothly scales from 16px when the viewport is at 32vw to 24px when the viewport is at 120vw.
 
 ## 🛠️ Technical Details
 
@@ -61,8 +61,8 @@ y = ax + b
 
 Where:
 - `y` = pixel value
-- `x` = viewport width as a decimal (vw/100, e.g., 32vw becomes 0.32)
-- `a` = slope (rate of change)
+- `x` = viewport width coefficient (vw value / 100)
+- `a` = slope (rate of change per vw unit)
 - `b` = y-intercept (base value in pixels)
 
 The final CSS output is: `calc(a*vw + b*px)`
