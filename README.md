@@ -19,8 +19,8 @@ This calculator solves the common problem of creating fluid, responsive layouts 
 2. **Input Values**:
    - **max-width**: Maximum pixel value (e.g., 24 for 24px)
    - **min-width**: Minimum pixel value (e.g., 16 for 16px)
-   - **min-vw**: Minimum viewport width in vw units (e.g., 32 for 32vw or 320px)
-   - **max-vw**: Maximum viewport width in vw units (e.g., 120 for 120vw or 1200px)
+   - **min-vw**: Minimum viewport width in vw units (e.g., 32 for 320px viewport width, since 1vw = 1% of viewport)
+   - **max-vw**: Maximum viewport width in vw units (e.g., 120 for 1200px viewport width)
 3. **Get Result**: The calculator automatically generates a `calc()` expression
 4. **Copy**: Click "Copy to Clipboard" to copy the result
 
@@ -29,8 +29,8 @@ This calculator solves the common problem of creating fluid, responsive layouts 
 **Input:**
 - max-width: `24`
 - min-width: `16`
-- min-vw: `32` (320px)
-- max-vw: `120` (1200px)
+- min-vw: `32` (320px viewport width)
+- max-vw: `120` (1200px viewport width)
 
 **Output:**
 ```css
@@ -61,7 +61,7 @@ y = ax + b
 
 Where:
 - `y` = pixel value
-- `x` = viewport width (in decimal form)
+- `x` = viewport width as a decimal (vw/100, e.g., 32vw becomes 0.32)
 - `a` = slope (rate of change)
 - `b` = y-intercept (base value in pixels)
 
